@@ -30,21 +30,23 @@ public class Programa {
                     altaPresupuesto();
                     break;
                 case 3:
+                    presupuestoPendiente();
                     break;
                 case 4:
+                    listadoPresupuesto();
                     break;
                 case 5:
-                  
+                    presupuestoRechazado();
                     break;
                 case 6:
+                    listadoCliente();
                     break;
                 case 7:
+                    cambiarEstado();
                     break;
                 case 8:
-                    break;
-                case 0:
                     System.out.println("Has salido del programa");
-                    break;
+                    break; 
                 default:
                     System.out.println("Opción incorrecta");
             }
@@ -91,4 +93,19 @@ public class Programa {
            miFichero1.grabar(Presupuestos);
         }
 }
+      private static void presupuestoPendiente() {
+
+    }
+      private static void listadoPresupuesto() {
+
+    } 
+      private static void presupuestoRechazado() {
+
+    } 
+      private static void listadoCliente() {
+
+    } 
+      private static void cambiarEstado() {
+
+    }     
 }
