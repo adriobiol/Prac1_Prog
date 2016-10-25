@@ -8,7 +8,7 @@ public class Programa {
 
     private static ListaCliente Clientes;
     private static ListaPresupuesto Presupuestos;
-    private static Fichero miFichero; 
+    private static Fichero miFichero;
     private static Fichero miFichero1;
     public static void main(String[] args) {
         miFichero = new Fichero("clientes.xml");
@@ -17,6 +17,9 @@ public class Programa {
         Presupuestos = (ListaPresupuesto) miFichero1.leer();
         if (Clientes == null){
             Clientes = new ListaCliente();
+        }
+        if (Presupuestos == null){
+            Presupuestos = new ListaPresupuesto();
         }
         int opcion;
         do {
@@ -71,6 +74,7 @@ public class Programa {
         int numero = EntradaDatos.pedirEntero("Introduce el número de teléfono");
         boolean VIP = EntradaDatos.pedirBoolean("¿El cliente es VIP? (Y/N)"); 
         Cliente c = new Cliente(nombre, apellidos, numero, VIP);
+        System.out.println(nombre + apellidos + numero + VIP);
         Clientes.registroCliente(c);
         miFichero.grabar(Clientes);
         

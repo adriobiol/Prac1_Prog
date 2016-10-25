@@ -1,6 +1,7 @@
 
 package prac1_prog1;
 
+import java.util.ArrayList;
 
 public class Cliente {
    
@@ -8,12 +9,25 @@ public class Cliente {
     private String apellidos;
     private int numero;
     private boolean VIP;
+    private ArrayList<Presupuesto> lista = new ArrayList<Presupuesto>();
+
+    public Cliente(){
+    }
 
     public Cliente(String nombre, String apellidos, int numero, boolean VIP) {
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.numero = numero;
         this.VIP = VIP;
+        this.lista = lista;
+    }
+
+    public ArrayList<Presupuesto> getLista() {
+        return lista;
+    }
+
+    public void setLista(ArrayList<Presupuesto> lista) {
+        this.lista = lista;
     }
 
     public String getNombre() {

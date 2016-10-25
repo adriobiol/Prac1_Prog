@@ -4,7 +4,7 @@ package prac1_prog1;
 import java.util.ArrayList;
 
 public class ListaCliente {
-    private ArrayList<Cliente> lista;
+    private ArrayList<Cliente> lista = new ArrayList<Cliente>();
 
     public ListaCliente() {
         this.lista = lista;
@@ -19,6 +19,7 @@ public class ListaCliente {
     }
     public void registroCliente(Cliente c){
         lista.add(c);
+        
     }
     public void bajaCliente(Cliente c){
         lista.remove(c);

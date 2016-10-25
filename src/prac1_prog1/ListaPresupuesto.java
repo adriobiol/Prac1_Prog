@@ -4,7 +4,7 @@ package prac1_prog1;
 import java.util.ArrayList;
 
 public class ListaPresupuesto {
-    private ArrayList<Presupuesto> lista;
+    private ArrayList<Presupuesto> lista = new ArrayList<Presupuesto>();
 
     public ListaPresupuesto() {
         this.lista = lista;
@@ -16,6 +16,9 @@ public class ListaPresupuesto {
 
     public void setLista(ArrayList<Presupuesto> lista) {
         this.lista = lista;
+    }
+    public void numPresupuesto () {
+        lista.size();
     }
     public void registroPresupuesto(Presupuesto p){
         lista.add(p);

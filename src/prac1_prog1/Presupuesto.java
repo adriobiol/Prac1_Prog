@@ -8,6 +8,9 @@ public class Presupuesto {
     private int telefono;
     private int estado;
 
+    public Presupuesto() {
+    }
+
     public Presupuesto(int numpres, String concepto, double precio, int telefono, int estado) {
         this.numpres = numpres;
         this.concepto = concepto;
