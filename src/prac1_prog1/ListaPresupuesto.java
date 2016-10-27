@@ -4,10 +4,10 @@ package prac1_prog1;
 import java.util.ArrayList;
 
 public class ListaPresupuesto {
-    private ArrayList<Presupuesto> lista = new ArrayList<Presupuesto>();
+    private ArrayList<Presupuesto> lista;
 
     public ListaPresupuesto() {
-        this.lista = lista;
+        this.lista = new ArrayList<Presupuesto>();
     }
 
     public ArrayList<Presupuesto> getLista() {
@@ -17,8 +17,10 @@ public class ListaPresupuesto {
     public void setLista(ArrayList<Presupuesto> lista) {
         this.lista = lista;
     }
-    public void numPresupuesto () {
-        lista.size();
+    public int numPresupuesto () {
+        int size = lista.size();
+        size = size + 1;
+        return size;
     }
     public void registroPresupuesto(Presupuesto p){
         lista.add(p);

@@ -7,19 +7,12 @@ import ocutilidades.EntradaDatos;
 public class Programa {
 
     private static ListaCliente Clientes;
-    private static ListaPresupuesto Presupuestos;
     private static Fichero miFichero;
-    private static Fichero miFichero1;
     public static void main(String[] args) {
         miFichero = new Fichero("clientes.xml");
-        miFichero1 = new Fichero("presupuestos.xml");
         Clientes = (ListaCliente) miFichero.leer();
-        Presupuestos = (ListaPresupuesto) miFichero1.leer();
         if (Clientes == null){
             Clientes = new ListaCliente();
-        }
-        if (Presupuestos == null){
-            Presupuestos = new ListaPresupuesto();
         }
         int opcion;
         do {
@@ -27,7 +20,7 @@ public class Programa {
             opcion = EntradaDatos.pedirEntero("Escoge una opción");
             switch (opcion) {
                 case 1:
-                    altaCliente();
+                    altaTelefono();
                     break;
                 case 2:
                     altaPresupuesto();
@@ -53,7 +46,7 @@ public class Programa {
                 default:
                     System.out.println("Opción incorrecta");
             }
-        } while (opcion != 0);
+        } while (opcion != 8);
     }
 
  
@@ -68,10 +61,9 @@ public class Programa {
         System.out.println("7. Cambiar estado de un presupuesto.");
         System.out.println("8. Salir");
     }
-    private static void altaCliente() {
+    private static void altaCliente(int numero) {
         String nombre = EntradaDatos.pedirCadena("Introduce el nombre");
         String apellidos = EntradaDatos.pedirCadena("Introduce el apellido");
-        int numero = EntradaDatos.pedirEntero("Introduce el número de teléfono");
         boolean VIP = EntradaDatos.pedirBoolean("¿El cliente es VIP? (Y/N)"); 
         Cliente c = new Cliente(nombre, apellidos, numero, VIP);
         System.out.println(nombre + apellidos + numero + VIP);
@@ -79,26 +71,35 @@ public class Programa {
         miFichero.grabar(Clientes);
         
     }
+    private static void altaTelefono(){
+        boolean result = false;
+        int numero = 0;
+        while (result==false){
+        numero = EntradaDatos.pedirEntero("Introduce el número de teléfono");
+        result = comprobarTelefono(numero);
+    }
+        altaCliente(numero);
+    }
       private static void altaPresupuesto() { 
         int numero = EntradaDatos.pedirEntero("Introduce el número de teléfono del cliente");  
         Cliente c = Clientes.comprobarTelefono(numero);
         if (c == null){
             System.out.println("El número no está registrado, así que debe registrar al cliente");
-            altaCliente();
+            altaCliente(numero);
         }
         else{
            String concepto = EntradaDatos.pedirCadena("Introduce el concepto"); 
            double precio = EntradaDatos.pedirDouble("Introduce el precio");
            //Estado del pedido 0= pendiente 1=aceptado 2=rechazado
            int estado = 0;
-           int numpres = 0; //Preguntar a Mar como escojo el número
+           int numpres = Clientes.getLista().numPresupuesto();
            Presupuesto p = new Presupuesto (numpres, concepto, precio, numero, estado);
            Presupuestos.registroPresupuesto(p);
            miFichero1.grabar(Presupuestos);
         }
 }
       private static void presupuestoPendiente() {
-
+          
     }
       private static void listadoPresupuesto() {
 
@@ -112,4 +113,15 @@ public class Programa {
       private static void cambiarEstado() {
 
     }     
+      //Comprobar num telefono
+      private static boolean comprobarTelefono(int numero){
+         String num = Integer.toString(numero);
+         int cantidad = num.length();
+         if (cantidad==9){
+             return true;
+         }
+         else {
+             return false;
+         }  
+      }
 }

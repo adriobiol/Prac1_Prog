@@ -9,7 +9,7 @@ public class Cliente {
     private String apellidos;
     private int numero;
     private boolean VIP;
-    private ArrayList<Presupuesto> lista = new ArrayList<Presupuesto>();
+    private ListaPresupuesto lista;
 
     public Cliente(){
     }
@@ -22,11 +22,11 @@ public class Cliente {
         this.lista = lista;
     }
 
-    public ArrayList<Presupuesto> getLista() {
+    public ListaPresupuesto getLista() {
         return lista;
     }
 
-    public void setLista(ArrayList<Presupuesto> lista) {
+    public void setLista(ListaPresupuesto lista) {
         this.lista = lista;
     }
 
