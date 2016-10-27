@@ -1,17 +1,16 @@
-
 package prac1_prog1;
 
 import java.util.ArrayList;
 
 public class Cliente {
-   
+
     private String nombre;
     private String apellidos;
     private int numero;
     private boolean VIP;
     private ListaPresupuesto lista;
 
-    public Cliente(){
+    public Cliente() {
     }
 
     public Cliente(String nombre, String apellidos, int numero, boolean VIP) {
@@ -45,7 +44,6 @@ public class Cliente {
     public boolean isVIP() {
         return VIP;
     }
-    
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
@@ -62,7 +60,5 @@ public class Cliente {
     public void setVIP(boolean VIP) {
         this.VIP = VIP;
     }
-    
-    
-    
+
 }

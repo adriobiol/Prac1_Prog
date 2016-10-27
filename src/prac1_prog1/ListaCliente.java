@@ -1,9 +1,9 @@
-
 package prac1_prog1;
 
 import java.util.ArrayList;
 
 public class ListaCliente {
+
     private ArrayList<Cliente> lista = new ArrayList<Cliente>();
 
     public ListaCliente() {
@@ -17,19 +17,32 @@ public class ListaCliente {
     public void setLista(ArrayList<Cliente> lista) {
         this.lista = lista;
     }
-    public void registroCliente(Cliente c){
+
+    public void registroCliente(Cliente c) {
         lista.add(c);
-        
+
     }
-    public void bajaCliente(Cliente c){
+
+    public void bajaCliente(Cliente c) {
         lista.remove(c);
     }
-    public Cliente comprobarTelefono(int num){
-        for (Cliente c : lista){
-        if (c.getNumero()==num){
-            return c;
-        }
+
+    public Cliente obtCliente(int num) {
+        for (Cliente c : lista) {
+            if (c.getNumero() == num) {
+                return c;
+            }
         }
         return null;
+    }
+
+    public boolean numExistente(int numero) {
+        boolean result = false;
+        for (Cliente c : lista) {
+            if (c.getNumero() == numero) {
+                result = true;
+            }
+        }
+        return result;
     }
 }
