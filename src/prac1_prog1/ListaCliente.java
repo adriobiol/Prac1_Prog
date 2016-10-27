@@ -23,10 +23,6 @@ public class ListaCliente {
 
     }
 
-    public void bajaCliente(Cliente c) {
-        lista.remove(c);
-    }
-
     public Cliente obtCliente(int num) {
         for (Cliente c : lista) {
             if (c.getNumero() == num) {
