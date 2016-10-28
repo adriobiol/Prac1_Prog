@@ -49,4 +49,10 @@ public class Presupuesto {
         this.precio = precio;
     }
 
+    @Override
+    public String toString() {
+        return "Presupuesto{" + "numpres=" + numpres + ", concepto=" + concepto + ", precio=" + precio + ", estado=" + estado + '}';
+    }
+
+
 }

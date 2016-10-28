@@ -18,7 +18,7 @@ public class Cliente {
         this.apellidos = apellidos;
         this.numero = numero;
         this.VIP = VIP;
-        this.lista = lista;
+        this.lista = new ListaPresupuesto();
     }
 
     public ListaPresupuesto getLista() {
@@ -60,5 +60,11 @@ public class Cliente {
     public void setVIP(boolean VIP) {
         this.VIP = VIP;
     }
+
+    @Override
+    public String toString() {
+        return "Cliente{" + "nombre=" + nombre + ", apellidos=" + apellidos + ", numero=" + numero + ", VIP=" + VIP + ", lista=" + lista + '}';
+    }
+    
 
 }

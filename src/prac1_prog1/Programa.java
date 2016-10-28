@@ -87,7 +87,7 @@ public class Programa {
         System.out.println(nombre + apellidos + numero + VIP);
         Clientes.registroCliente(c);
         miFichero.grabar(Clientes);
-        System.out.println("Presupuesto dado de alta con éxito");
+        System.out.println("Cliente dado de alta con éxito");
     }
     //Opción 2
     private static void altaPresupuesto() {
@@ -165,11 +165,9 @@ public class Programa {
             numero = EntradaDatos.pedirEntero("Introduce el número de presupuesto");
             for (Cliente c : Clientes.getLista()) {
                 for (Presupuesto p : c.getLista().getLista()) {
-                    if (p.getEstado() == numero) {
+                    if (p.getNumpres() == numero) {
                         error = false;
                         p1 = p;
-                    } else {
-                        System.out.println("El número no existe");
                     }
                 }
             }
@@ -190,12 +188,13 @@ public class Programa {
         int presupuesto = 0;
         boolean error = false;
         while (error == false) {
+            error=true;
             presupuesto = EntradaDatos.pedirEntero("Introduce el número de presupuesto");
             for (Cliente c : Clientes.getLista()) {
                 for (Presupuesto p : c.getLista().getLista()) {
                     if (p.getNumpres() == presupuesto) {
-                        error = true;
                         System.out.println("El número indicado ya existe, prueba de nuevo");
+                        error=false;
                     }
                 }
             }

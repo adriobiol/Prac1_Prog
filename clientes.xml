@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.8.0_101" class="java.beans.XMLDecoder">
+ <object class="prac1_prog1.ListaCliente" id="ListaCliente0">
+  <void property="lista">
+   <void method="add">
+    <object class="prac1_prog1.Cliente">
+     <void property="VIP">
+      <boolean>true</boolean>
+     </void>
+     <void property="apellidos">
+      <string>O</string>
+     </void>
+     <void property="lista">
+      <object class="prac1_prog1.ListaPresupuesto" id="ListaPresupuesto0">
+       <void property="lista">
+        <void method="add">
+         <object class="prac1_prog1.Presupuesto">
+          <void property="concepto">
+           <string>Armario</string>
+          </void>
+          <void property="numpres">
+           <int>1</int>
+          </void>
+          <void property="precio">
+           <double>114.94999999999999</double>
+          </void>
+         </object>
+        </void>
+        <void method="add">
+         <object class="prac1_prog1.Presupuesto">
+          <void property="concepto">
+           <string>Mesa</string>
+          </void>
+          <void property="estado">
+           <int>2</int>
+          </void>
+          <void property="numpres">
+           <int>2</int>
+          </void>
+          <void property="precio">
+           <double>114.94999999999999</double>
+          </void>
+         </object>
+        </void>
+        <void method="add">
+         <object class="prac1_prog1.Presupuesto">
+          <void property="concepto">
+           <string>Silla</string>
+          </void>
+          <void property="numpres">
+           <int>3</int>
+          </void>
+          <void property="precio">
+           <double>57.474999999999994</double>
+          </void>
+         </object>
+        </void>
+        <void method="add">
+         <object class="prac1_prog1.Presupuesto">
+          <void property="concepto">
+           <string>Escritorio</string>
+          </void>
+          <void property="estado">
+           <int>2</int>
+          </void>
+          <void property="numpres">
+           <int>4</int>
+          </void>
+          <void property="precio">
+           <double>229.89999999999998</double>
+          </void>
+         </object>
+        </void>
+        <void method="add">
+         <object class="prac1_prog1.Presupuesto">
+          <void property="concepto">
+           <string>Wq</string>
+          </void>
+          <void property="estado">
+           <int>1</int>
+          </void>
+          <void property="numpres">
+           <int>6</int>
+          </void>
+          <void property="precio">
+           <double>137.93999999999997</double>
+          </void>
+         </object>
+        </void>
+       </void>
+      </object>
+     </void>
+     <void property="nombre">
+      <string>A</string>
+     </void>
+     <void property="numero">
+      <int>123456789</int>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="prac1_prog1.Cliente">
+     <void property="apellidos">
+      <string>N</string>
+     </void>
+     <void property="lista">
+      <object class="prac1_prog1.ListaPresupuesto"/>
+     </void>
+     <void property="nombre">
+      <string>J</string>
+     </void>
+     <void property="numero">
+      <int>934732798</int>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="prac1_prog1.Cliente">
+     <void property="apellidos">
+      <string>T</string>
+     </void>
+     <void property="lista">
+      <object class="prac1_prog1.ListaPresupuesto" id="ListaPresupuesto1">
+       <void property="lista">
+        <void method="add">
+         <object class="prac1_prog1.Presupuesto">
+          <void property="concepto">
+           <string>QW</string>
+          </void>
+          <void property="estado">
+           <int>2</int>
+          </void>
+          <void property="numpres">
+           <int>9</int>
+          </void>
+          <void property="precio">
+           <double>418.65999999999997</double>
+          </void>
+         </object>
+        </void>
+       </void>
+      </object>
+     </void>
+     <void property="nombre">
+      <string>Q</string>
+     </void>
+     <void property="numero">
+      <int>111111111</int>
+     </void>
+    </object>
+   </void>
+  </void>
+ </object>
+</java>

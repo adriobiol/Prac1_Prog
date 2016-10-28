@@ -7,7 +7,7 @@ public class ListaPresupuesto {
     private ArrayList<Presupuesto> lista;
 
     public ListaPresupuesto() {
-        this.lista = new ArrayList<Presupuesto>();
+        lista = new ArrayList<>();
     }
 
     public ArrayList<Presupuesto> getLista() {
@@ -18,14 +18,10 @@ public class ListaPresupuesto {
         this.lista = lista;
     }
 
-    public int numPresupuesto() {
-        int size = lista.size();
-        size = size + 1;
-        return size;
-    }
-
     public void registroPresupuesto(Presupuesto p) {
         lista.add(p);
     }
+    
+
 
 }

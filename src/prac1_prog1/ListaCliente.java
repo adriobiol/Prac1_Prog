@@ -33,10 +33,10 @@ public class ListaCliente {
     }
 
     public boolean numExistente(int numero) {
-        boolean result = false;
+        boolean result = true;
         for (Cliente c : lista) {
             if (c.getNumero() == numero) {
-                result = true;
+                result = false;
             }
         }
         return result;
